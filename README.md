@@ -26,7 +26,6 @@ src/
 │       ├── util/      
 │       └── App.java   
 └── test/java/
-└── DriverTest.java   
 </pre>
 
 ## Clone Repository
