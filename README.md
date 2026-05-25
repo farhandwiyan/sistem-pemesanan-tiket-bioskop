@@ -20,7 +20,7 @@ src/
 ├── main/
 │   └── java/          
 │       ├── model/     
-│       ├── repository/     → Akses database (CRUD)
+│       ├── repository/     
 │       ├── controller/
 │       ├── view/      
 │       ├── util/      
