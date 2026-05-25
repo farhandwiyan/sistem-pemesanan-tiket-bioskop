@@ -164,12 +164,24 @@ public class PemesananView extends View {
 
         System.out.print("Pilih makanan: ");
         int pilihanMakanan = Integer.parseInt(input.nextLine().trim());
-        System.out.print("Jumlah: ");
-        int jumlahMakanan = Integer.parseInt(input.nextLine().trim());
 
         Makanan makananDipilih = null;
-        if ((pilihanMakanan > 0 && pilihanMakanan <= listMakanan.size()) && jumlahMakanan > 0) {
+
+        if (pilihanMakanan == 0) {
+            showKonfirmasi(jadwal, kursiDipilih, null, 0);
+            return;
+        }
+
+        System.out.print("Jumlah: ");
+        int jumlahMakanan = Integer.parseInt(input.nextLine().trim());
+        
+
+        if (pilihanMakanan > 0 && pilihanMakanan <= listMakanan.size()) {
+            System.out.print("Jumlah: ");
+            jumlahMakanan = Integer.parseInt(input.nextLine().trim());
             makananDipilih = listMakanan.get(pilihanMakanan - 1);
+        } else {
+            System.out.println("Pilihan tidak valid.");
         }
 
         showKonfirmasi(jadwal, kursiDipilih, makananDipilih, jumlahMakanan);
