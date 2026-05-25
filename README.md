@@ -114,6 +114,6 @@ CREATE TABLE pemesanan_kursi (
 ```
 
 ## Database Configuration
-Database configuration in `src/main/java/util/ConnctionUtil.java` 
+Database configuration in `src/main/java/util/ConnectionUtil.java` 
 
 _Project ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Berorientasi Objek._
