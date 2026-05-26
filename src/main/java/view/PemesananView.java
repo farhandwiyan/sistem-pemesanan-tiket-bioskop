@@ -62,7 +62,7 @@ public class PemesananView extends View {
         System.out.println("\n=== Daftar Jadwal ===");
         int index = 1;
         for (Jadwal jadwal : listJadwal) {
-            System.out.println(index + ". Film ID: " + jadwal.getFilmId() +
+            System.out.println(index + ". Film ID: " + jadwal.getFilmId() + " Judul Film: " + filmControl.getById(jadwal.getFilmId()).getJudul() +
                     " | Studio ID: " + jadwal.getStudioId() +
                     " | Tayang: " + jadwal.getTanggalTayang() +
                     " | Harga: Rp " + String.format("%,.0f", jadwal.getHarga()));
@@ -172,9 +172,7 @@ public class PemesananView extends View {
             return;
         }
 
-        System.out.print("Jumlah: ");
-        int jumlahMakanan = Integer.parseInt(input.nextLine().trim());
-        
+        int jumlahMakanan = 0;
 
         if (pilihanMakanan > 0 && pilihanMakanan <= listMakanan.size()) {
             System.out.print("Jumlah: ");
@@ -191,7 +189,7 @@ public class PemesananView extends View {
         String namaFilm = filmControl.getById(jadwal.getFilmId()).getJudul(); // tampilkan nama film
 
         System.out.println("\n=== Konfirmasi Pemesanan ===");
-        System.out.println("Jadwal   : Film ID " + namaFilm + " | " + jadwal.getTanggalTayang());
+        System.out.println("Jadwal   : Film " + namaFilm + " | " + jadwal.getTanggalTayang());
         System.out.println("Kursi    : " + String.join(", ", kursiDipilih));
         System.out.println("Makanan  : " + (makanan != null ? makanan.getNama() : "Tidak ada"));
 

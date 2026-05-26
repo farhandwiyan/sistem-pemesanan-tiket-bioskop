@@ -70,7 +70,7 @@ public class UserView extends View {
             userControl.handleSave(new User(username, password, "user"));
             System.out.println("Registrasi berhasil! Silakan login.");
 
-            mainMenu.showMenu();
+            // mainMenu.showMenu();
         } catch (Exception e) {
             System.out.println("Registrasi gagal: " + e.getMessage());
         }
